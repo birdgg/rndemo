@@ -1,6 +1,10 @@
-import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import * as React from 'react'
+import {NavigationContainer} from '@react-navigation/native'
 
-export const RootNavigationContainer: React.FC<{}> = ({children}) => {
-  return <NavigationContainer>{children}</NavigationContainer>;
-};
+export const RootNavigationContainer = ({
+  children,
+}: {
+  children: React.ReactNode
+}) => {
+  return <NavigationContainer>{children}</NavigationContainer>
+}
