@@ -80,6 +80,7 @@ import org.apache.tools.ant.taskdefs.condition.Os
 
 project.ext.react = [
     enableHermes: false,  // clean and rebuild if changing
+    bundleInDebug: true,
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -141,6 +142,9 @@ android {
         versionCode 1
         versionName "1.0"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
+
+        testBuildType System.getProperty('testBuildType', 'debug')  // This will later be used to control the test apk build type
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
         if (isNewArchitectureEnabled()) {
             // We configure the NDK build only if you decide to opt-in for the New Architecture.
@@ -242,6 +246,12 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
+
+        releaseE2E {
+            initWith release
+            setMatchingFallbacks('release')
+            proguardFile "${rootProject.projectDir}/../node_modules/detox/android/detox/proguard-rules-app.pro"
+        }
     }
 
     // applicationVariants are e.g. debug, release
@@ -268,6 +278,11 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+
+    androidTestImplementation('com.wix:detox:+')
+    androidTestImplementation 'com.linkedin.testbutler:test-butler-library:2.2.1'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0-alpha05'
+//    androidTestImplementation 'androidx.test:rules:1.4.0'
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.fbjni'

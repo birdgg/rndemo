@@ -12,6 +12,7 @@ module.exports = {
         'no-shadow': 'off',
         'no-undef': 'off',
         semi: 'off',
+        'react-native/no-inline-styles': 'off',
       },
     },
     {
@@ -20,6 +21,7 @@ module.exports = {
         'detox/detox': true,
         jest: true,
         'jest/globals': true,
+        semi: 'off',
       },
     },
   ],

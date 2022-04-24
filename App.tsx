@@ -1,41 +1,12 @@
 import React from 'react'
-import {
-  Button,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  Text,
-  useColorScheme,
-} from 'react-native'
-
-import {Colors} from 'react-native/Libraries/NewAppScreen'
+import {NavigationContainer} from '@react-navigation/native'
+import {RootStacks} from './src/naivgation/RootStacks'
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark'
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  }
-
-  const array = new Array(10).fill(1)
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Text testID="hello">Hello, Detox!</Text>
-        {array.map((item, index) => (
-          <Button
-            key={index}
-            title={`button ${index}`}
-            onPress={() => {}}
-            testID={`button_${index}`}
-          />
-        ))}
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <RootStacks />
+    </NavigationContainer>
   )
 }
 
