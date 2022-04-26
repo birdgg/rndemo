@@ -31,6 +31,12 @@
       "device": {
         "avdName": "Pixel_XL_API_31"
       }
+    },
+    "device": {
+      "type": "android.attached",
+      "device": {
+        "adbName": "c512cfdd"
+      }
     }
   },
   "configurations": {

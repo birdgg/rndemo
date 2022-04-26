@@ -3,9 +3,9 @@ describe('App', () => {
     await device.launchApp()
   })
 
-  beforeEach(async () => {
-    await device.reloadReactNative()
-  })
+  // beforeEach(async () => {
+  //   await device.reloadReactNative()
+  // })
 
   it('should show the hello message', async () => {
     await expect(element(by.id('home'))).toBeVisible()
