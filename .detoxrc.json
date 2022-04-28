@@ -16,6 +16,7 @@
     "android.release": {
       "type": "android.apk",
       "binaryPath": "android/app/build/outputs/apk/releaseE2E/app-releaseE2E.apk",
+      "testBinaryPath": "android/app/build/outputs/apk/androidTest/release/app-release-androidTest.apk",
       "build": "cd android && ./gradlew assembleReleaseE2E assembleAndroidTest -DtestBuildType=release && cd .."
     }
   },
@@ -32,10 +33,22 @@
         "avdName": "Pixel_XL_API_31"
       }
     },
-    "device": {
+    "oppo": {
       "type": "android.attached",
       "device": {
         "adbName": "c512cfdd"
+      }
+    },
+    "honor": {
+      "type": "android.attached",
+      "device": {
+        "adbName": "ARMJ9X1526G28006"
+      }
+    },
+    "xiaomi": {
+      "type": "android.attached",
+      "device": {
+        "adbName": "311b54ea"
       }
     }
   },
@@ -50,6 +63,30 @@
     },
     "android.emu.release": {
       "device": "emulator",
+      "app": "android.release"
+    },
+    "android.oppo.debug": {
+      "device": "oppo",
+      "app": "android.debug"
+    },
+    "android.oppo.release": {
+      "device": "oppo",
+      "app": "android.release"
+    },
+    "android.honor.debug": {
+      "device": "honor",
+      "app": "android.debug"
+    },
+    "android.honor.release": {
+      "device": "honor",
+      "app": "android.release"
+    },
+    "android.mi.debug": {
+      "device": "xiaomi",
+      "app": "android.debug"
+    },
+    "android.mi.release": {
+      "device": "xiaomi",
       "app": "android.release"
     }
   }
