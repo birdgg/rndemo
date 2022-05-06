@@ -14,16 +14,4 @@ describe('Testing react navigation', () => {
 
     expect(header).toBeTruthy()
   })
-
-  test('setting tab click', async () => {
-    const component = <App />
-
-    const {findByText, findByTestId} = render(component)
-    const toClick = await findByTestId('settingsTab')
-
-    fireEvent(toClick, 'press')
-    const settings = await findByText('Settings!')
-
-    expect(settings).toBeTruthy()
-  })
 })

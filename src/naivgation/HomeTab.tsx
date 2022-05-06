@@ -21,7 +21,7 @@ const Tab = createBottomTabNavigator()
 
 export function HomeTab() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator defaultScreenOptions={{headerShown: false}}>
       <Tab.Screen
         name="Home"
         component={HomeScreen}

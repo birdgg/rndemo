@@ -1,13 +1,12 @@
 import * as React from 'react'
-import {View, Text, StyleSheet} from 'react-native'
+import {View, Text, StyleSheet, requireNativeComponent} from 'react-native'
 import {HomeTabScreenProps} from '../naivgation/types'
+import WebView from 'react-native-webview'
+
+const SteamWebView = requireNativeComponent('SteamWebView')
 
 export const HomeScreen = ({}: HomeTabScreenProps<'Home'>) => {
-  return (
-    <View style={styles.container}>
-      <Text testID="home">Home Screen</Text>
-    </View>
-  )
+  return <SteamWebView url="https://www.baidu.com" style={{flex: 1}} />
 }
 
 const styles = StyleSheet.create({

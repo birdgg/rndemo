@@ -283,6 +283,7 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    implementation("androidx.webkit:webkit:1.4.0")
 
     androidTestImplementation('com.wix:detox:+')
     androidTestImplementation 'com.linkedin.testbutler:test-butler-library:2.2.1'

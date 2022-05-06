@@ -6,4 +6,15 @@ module.exports = {
   transformIgnorePatterns: [
     'node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation)',
   ],
+  collectCoverage: true,
+  coverageReporters: ['lcov'],
+  coverageDirectory: 'test-coverage',
+  coverageThreshold: {
+    global: {
+      branches: 0,
+      functions: 0,
+      lines: 0,
+      statements: 0,
+    },
+  },
 }
