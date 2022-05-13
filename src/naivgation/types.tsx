@@ -8,6 +8,7 @@ import type {BottomTabScreenProps} from '@react-navigation/bottom-tabs'
 export type RootStackParamList = {
   Tab: NavigatorScreenParams<HomeTabParamList>
   Detail: {id: string}
+  SwipeableList: undefined
   NotFound: undefined
 }
 

@@ -1,12 +1,31 @@
 import * as React from 'react'
-import {View, Text, StyleSheet, requireNativeComponent} from 'react-native'
+import {
+  View,
+  Text,
+  StyleSheet,
+  requireNativeComponent,
+  Button,
+  NativeModules,
+} from 'react-native'
+import {SafeAreaView} from 'react-native-safe-area-context'
 import {HomeTabScreenProps} from '../naivgation/types'
-import WebView from 'react-native-webview'
 
-const SteamWebView = requireNativeComponent('SteamWebView')
+const OpenNativeModule = NativeModules.OpenNativeModule
 
-export const HomeScreen = ({}: HomeTabScreenProps<'Home'>) => {
-  return <SteamWebView url="https://www.baidu.com" style={{flex: 1}} />
+export const HomeScreen = ({navigation}: HomeTabScreenProps<'Home'>) => {
+  const openNativePage = () => {
+    OpenNativeModule.openNativeVC()
+  }
+  return (
+    <SafeAreaView style={{flex: 1}}>
+      <Text>这是首页</Text>
+      <Button title="打开 native 页面" onPress={openNativePage} />
+      <Button
+        onPress={() => navigation.push('SwipeableList')}
+        title="swipeable list"
+      />
+    </SafeAreaView>
+  )
 }
 
 const styles = StyleSheet.create({
