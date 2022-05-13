@@ -16,6 +16,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A9702E25282E477F00BBCB4E /* OpenNativeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A9702E24282E477F00BBCB4E /* OpenNativeModule.m */; };
 		A9702E28282E480900BBCB4E /* NativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9702E27282E480900BBCB4E /* NativeViewController.m */; };
+		A9702E2B282E599500BBCB4E /* RNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9702E2A282E599500BBCB4E /* RNViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		A9702E24282E477F00BBCB4E /* OpenNativeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenNativeModule.m; sourceTree = "<group>"; };
 		A9702E26282E480900BBCB4E /* NativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeViewController.h; sourceTree = "<group>"; };
 		A9702E27282E480900BBCB4E /* NativeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeViewController.m; sourceTree = "<group>"; };
+		A9702E29282E599500BBCB4E /* RNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNViewController.h; sourceTree = "<group>"; };
+		A9702E2A282E599500BBCB4E /* RNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNViewController.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -102,6 +105,8 @@
 				A9702E24282E477F00BBCB4E /* OpenNativeModule.m */,
 				A9702E26282E480900BBCB4E /* NativeViewController.h */,
 				A9702E27282E480900BBCB4E /* NativeViewController.m */,
+				A9702E29282E599500BBCB4E /* RNViewController.h */,
+				A9702E2A282E599500BBCB4E /* RNViewController.m */,
 			);
 			name = rndemo;
 			sourceTree = "<group>";
@@ -420,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9702E2B282E599500BBCB4E /* RNViewController.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				A9702E25282E477F00BBCB4E /* OpenNativeModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
